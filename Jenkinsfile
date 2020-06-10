@@ -6,7 +6,7 @@ pipeline {
         echo 'PRs from same repository working!!'
         echo ' PRs from forked repository tested'
         echo ' PRs from forked repository is it creating branch status check?'
-                echo 'checking PR with integ label'
+                echo 'checking PR with branch having integ name from fork'
 
       }
     }
