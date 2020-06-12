@@ -21,5 +21,12 @@ pipeline {
         sleep 30
       }
     }
+    
+    stage('AKS Tests') {
+      steps {
+        echo 'Running AKS Tests!!'
+        sleep 10
+      }
+    }
   }
 }
