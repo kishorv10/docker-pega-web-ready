@@ -24,7 +24,7 @@ pipeline {
     
     stage('AKS Tests') {
       steps {
-        echo 'Running AKS Tests!!'
+        echo 'Running AKS Tests!! from kishor repo'
         sleep 10
       }
     }
