@@ -1,30 +1,24 @@
 pipeline {
   agent any
   stages {
-    stage('second') {
+    stage('Setup') {
       steps {
-        echo 'PRs from same repository working!!'
-        echo ' PRs from forked repository tested'
-        echo ' PRs from forked repository is it creating branch status check? checking on github side again'
-        sleep 120
-                echo 'PR without integ label'
-
-         //  error "Failing it .........."
-
+        echo 'Setting up cloud clusters'
+        echo ' Init!!!!'
+        sleep 60
       }
     }
-     stage('madhuri') {
+     stage('Deploy') {
       steps {
-        echo 'hello there!!'
-        echo ' PRs from forked repository is it creating branch status check?'
-                echo 'checking PR with integ label'
-
+        echo ' Deploying charts and building images'
+        sleep 30
       }
     }
 
-    stage('kishor') {
+    stage('Tests') {
       steps {
-        echo 'In Kishor stage'
+        echo 'Running Tests!!'
+        sleep 30
       }
     }
   }
