@@ -1,30 +1,26 @@
 pipeline {
   agent any
   stages {
-    stage('second') {
+    stage('first') {
       steps {
         echo 'PRs from same repository working!!'
-        echo ' PRs from forked repository tested'
-        echo ' PRs from forked repository is it creating branch status check? checking on github side again'
-        sleep 120
-                echo 'PR without integ label'
-
-         //  error "Failing it .........."
+        echo ' In First stage'
+        //sleep 120
+        //  error "Failing it .........."
 
       }
     }
-     stage('madhuri') {
+     stage('second') {
       steps {
         echo 'hello there!!'
-        echo ' PRs from forked repository is it creating branch status check?'
-                echo 'checking PR with integ label'
+        echo ' In second stage'
 
       }
     }
 
-    stage('kishor') {
+    stage('third') {
       steps {
-        echo 'In Kishor stage'
+        echo 'In Third stage'
       }
     }
   }
