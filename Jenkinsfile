@@ -1,25 +1,26 @@
 pipeline {
   agent any
   stages {
-    stage('first') {
+    stage('Setup') {
       steps {
-        echo 'PRs from same repository working!!'
-        echo ' In First stage'
-        //sleep 120
-        //  error "Failing it .........."
-
+        echo 'Setting up cloud clusters'
+        echo ' Init!!!!'
+        sleep 5
       }
     }
-     stage('second') {
+     stage('Deploy') {
       steps {
         echo 'hello there!!'
         echo ' In second stage'
+        echo ' Deploying charts and building images'
+        sleep 5
       }
     }
 
-    stage('third') {
+    stage('Tests') {
       steps {
-        echo 'In Third stage'
+        echo 'Running Tests!!'
+        sleep 5
       }
     }
   }
