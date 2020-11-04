@@ -5,20 +5,20 @@ pipeline {
       steps {
         echo 'Setting up cloud clusters'
         echo ' Init!!!!'
-        sleep 60
+        sleep 6
       }
     }
      stage('Deploy') {
       steps {
         echo ' Deploying charts and building images'
-        sleep 30
+        sleep 1
       }
     }
 
     stage('Tests') {
       steps {
         echo 'Running Tests!!'
-        sleep 30
+        sleep 1
       }
     }
   }
